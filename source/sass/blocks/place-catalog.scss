@@ -1,0 +1,131 @@
+.place-catalog__title {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  width: 358px;
+
+  @include tablets {
+    margin: 0 auto;
+    width: 300px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    margin-top: 80px;
+    margin-bottom: 24px;
+  }
+
+  @include phones {
+    width: 288px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.place-catalog__title::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 228px;
+  height: 4px;
+  background-color: $main-orange;
+  top: 20px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.place-catalog__info {
+  font-size: 16px;
+  line-height: 28px;
+  color: $black-opacity;
+  width: 400px;
+
+  @include tablets {
+    margin: 0 auto;
+    width: 350px;
+    text-align: center;
+  }
+
+  @include phones {
+    width: 288px;
+  }
+}
+
+.place-catalog__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.place-catalog__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 101px;
+  text-align: center;
+
+  @include tablets {
+    margin-bottom: -30px;
+    justify-content: start;
+  }
+}
+
+.place-catalog__item:nth-of-type(1) {
+  @include tablets {
+    margin-right: 29px;
+  }
+
+  @include phones {
+    margin-right: 0;
+  }
+}
+
+.place-catalog__item:nth-of-type(3) {
+  @include tablets {
+    margin-right: 29px;
+  }
+
+  @include phones {
+    margin-right: 0;
+  }
+}
+
+.place-catalog__item:nth-of-type(4) {
+  margin-left: 150px;
+
+  @include tablets {
+    margin-left: 0;
+  }
+}
+
+.place-catalog__item:nth-of-type(5) {
+  margin-right: 150px;
+
+  @include tablets {
+    margin-right: 0;
+  }
+}
+
+.place-catalog__img {
+  position: relative;
+  top: 63px;
+}
+
+.place-catalog__name {
+  z-index: 5;
+  background-color: $white;
+  padding: 17px 49px;
+  width: 215px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $dark-main;
+}

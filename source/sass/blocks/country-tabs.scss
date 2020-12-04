@@ -1,0 +1,250 @@
+.country-tabs {
+  background: url("../img/tabs-bg-desktop.png") no-repeat;
+  background-position-x: 247px;
+  background-position-y: 92px;
+  padding-bottom: 380px;
+
+  @include tablets {
+    background: none;
+    padding: 98px 0;
+  }
+}
+
+.tabs-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 899px;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 90px;
+
+  @include tablets {
+    width: 705px;
+    margin: 0 auto;
+  }
+
+  @include phones {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.tabs-menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 899px;
+  height: 2px;
+  background: $black-opacity-light;
+  top: 40px;
+
+  @include tablets {
+    width: 705px;
+  }
+
+  @include phones {
+    width: 295px;
+    left: 20px;
+  }
+}
+
+.tabs-menu__item:nth-of-type(3),
+.tabs-menu__item:nth-of-type(4),
+.tabs-menu__item:nth-of-type(5) {
+  @include phones {
+    display: none;
+  }
+}
+
+.tabs-menu__link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $black-opacity-light;
+}
+
+.country-tabs__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.country-tabs__item {
+  display: flex;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.country-tabs__left-wrapper {
+  width: 425px;
+  margin-right: 45px;
+
+  @include tablets {
+    width: initial;
+    margin-right: 0;
+  }
+}
+
+.country-tabs__title {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  color: $dark-main;
+  position: relative;
+
+  @include tablets {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+  }
+
+  @include phones {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
+
+.country-tabs__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 175px;
+  height: 3px;
+  background: $main-orange;
+  bottom: -10px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.country-tabs__text {
+  font-size: 16px;
+  line-height: 28px;
+  color: $black-opacity;
+
+  @include tablets {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+.country-tabs__buy-button {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  background: $main-orange;
+  color: $white;
+  padding: 30px 5px;
+  display: block;
+  width: 250px;
+  height: 75px;
+  text-align: center;
+
+  @include tablets {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 50px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.country-tabs__img {
+  display: block;
+  width: 100%;
+}
+
+.feedback {
+  position: absolute;
+  width: 382px;
+  background: $white;
+  top: 150px;
+  right: 100px;
+  padding: 30px;
+
+  @include tablets {
+    width: 60%;
+    height: 60%;
+    min-width: 382px;
+    max-width: 382px;
+    padding: 40px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -542px;
+    right: 0;
+  }
+
+  @include phones {
+    height: 45%;
+    min-width: 268px;
+    max-width: 268px;
+    padding: 20px;
+    bottom: -700px;
+  }
+}
+
+.feedback__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  color: $dark-main;
+  position: relative;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.feedback__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background: $main-orange;
+  bottom: -10px;
+  left: 80px;
+}
+
+.feedback__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  color: $black-opacity;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.feedback__author-wrapper {
+  display: flex;
+  align-items: center;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.feedback__author-name {
+  margin-left: 20px;
+
+  @include phones {
+    margin-top: 20px;
+  }
+}

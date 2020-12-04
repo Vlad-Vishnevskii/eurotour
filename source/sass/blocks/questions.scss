@@ -1,0 +1,110 @@
+.questions {
+  background: url("../img/questions-bg-desktop.jpg") no-repeat;
+  min-height: 455px;
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    margin-top: 125px;
+  }
+
+  @include phones {
+    background: none;
+    margin-top: 0;
+  }
+}
+
+.questions__form {
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px $black-shadow;
+  width: 656px;
+  min-height: 315px;
+  margin-left: auto;
+  margin-right: 50px;
+  text-align: center;
+
+  @include phones {
+    width: 100%;
+    padding: 0 20px;
+    box-shadow: none;
+    background: $pink-light;
+    padding-bottom: 50px;
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
+
+.questions__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  color: $dark;
+  margin-top: 50px;
+}
+
+.questions__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.questions__input {
+  width: 269px;
+  height: 40px;
+  border: 1px solid $black-opacity-light;
+}
+
+.questions__input_tel {
+  padding-left: 26px;
+  padding-right: 5px;
+  margin-right: 19px;
+  background: url("../img/star-icon.png") no-repeat;
+  background-position-x: 15px;
+  background-position-y: 7px;
+
+  @include phones {
+    margin-right: 0;
+    background-color: $white;
+    margin-bottom: 20px;
+  }
+}
+
+.questions__input_email {
+  padding: 0 15px;
+}
+
+.questions__input::-webkit-input-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+}
+
+.questions__input::-moz-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+}
+
+.questions__submit {
+  text-transform: uppercase;
+  background: $main-orange;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $white;
+  padding: 15px 50px;
+  margin-top: 43px;
+
+  @include phones {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

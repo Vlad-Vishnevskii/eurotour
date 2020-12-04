@@ -1,0 +1,114 @@
+.main-nav {
+  display: flex;
+  padding: 39px;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+
+  @include tablets {
+    padding: 0;
+    padding-left: 20px;
+    align-items: center;
+  }
+}
+
+.menu-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.mobile-menu_nojs {
+  display: flex;
+}
+
+.mobile-menu_open {
+  display: flex;
+  min-height: 568px;
+  justify-content: center;
+}
+
+.mobile-menu__item {
+  margin-bottom: 30px;
+  background: $light;
+  padding: 17px;
+  padding-left: 20px;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menu-list__item:first-of-type {
+  margin-right: 40px;
+}
+
+.menu-list__item:nth-of-type(2) {
+  margin-right: 90px;
+}
+
+.menu-list__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-list__link_tel {
+  text-decoration: underline;
+  position: relative;
+}
+
+.menu-list__link_tel::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background: url("../img/phone.svg");
+  width: 30px;
+  height: 30px;
+  left: -35px;
+  top: -5px;
+}
+
+.main-nav-mobile__button {
+  display: none;
+
+  @include tablets {
+    display: block;
+    background-color: $main-orange;
+    padding: 30px;
+  }
+
+  @include phones {
+    padding: 20px;
+  }
+}
+
+.main-nav-mobile__button_opened {
+  background: none;
+}
