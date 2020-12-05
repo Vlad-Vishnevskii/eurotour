@@ -137,19 +137,28 @@ img {
     .mobile-menu {
       flex-direction: column; } }
 
-.mobile-menu_nojs {
+.mobile-menu_no-js {
   display: flex; }
 
-.mobile-menu_open {
-  display: flex;
-  min-height: 568px;
-  justify-content: center; }
+@media screen and (max-width: 1023px) {
+  .mobile-menu_open {
+    display: flex;
+    min-height: 568px;
+    justify-content: flex-start; } }
 
 .mobile-menu__item {
   margin-bottom: 30px;
   background: #fbf8f8;
   padding: 17px;
   padding-left: 20px; }
+
+.mobile-menu__item_close {
+  background: none;
+  display: flex;
+  justify-content: flex-end; }
+
+.mobile-menu__item_no-js {
+  display: none; }
 
 .mobile-menu__link {
   text-decoration: none;
@@ -186,23 +195,22 @@ img {
   left: -35px;
   top: -5px; }
 
-.main-nav-mobile__button {
+.main-nav__button {
   display: none; }
   @media screen and (max-width: 1023px) {
-    .main-nav-mobile__button {
+    .main-nav__button {
       display: block;
       background-color: #fe7865;
       padding: 30px; } }
   @media screen and (max-width: 767px) {
-    .main-nav-mobile__button {
+    .main-nav__button {
       padding: 20px; } }
 
-@media screen and (max-width: 1023px) {
-  .main-nav-mobile__button_nojs {
-    display: none; } }
+.main-nav__button_no-js {
+  display: none; }
 
-.main-nav-mobile__button_opened {
-  background: none; }
+.main-nav__button_opened {
+  display: none; }
 
 .description {
   background: url("../img/description-bg.jpg") no-repeat;
@@ -941,6 +949,9 @@ img {
 
 .page-footer__link {
   color: #fe7865; }
+  @media screen and (max-width: 767px) {
+    .page-footer__link {
+      text-align: center; } }
 
 .page-footer__link_email {
   font-size: 14px;
@@ -974,10 +985,6 @@ img {
   @media screen and (max-width: 1023px) {
     .page-footer__email-tablets {
       display: inline; } }
-
-@media screen and (max-width: 767px) {
-  .page-footer__link {
-    text-align: center; } }
 
 .popup {
   width: 728px;
@@ -1029,7 +1036,7 @@ img {
   font-weight: 600;
   font-size: 25px;
   line-height: 170%;
-  color: #48494D; }
+  color: #48494d; }
   @media screen and (max-width: 1023px) {
     .popup-buy__title {
       margin-top: 115px; } }

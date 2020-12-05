@@ -38,14 +38,16 @@
   }
 }
 
-.mobile-menu_nojs {
+.mobile-menu_no-js {
   display: flex;
 }
 
 .mobile-menu_open {
-  display: flex;
-  min-height: 568px;
-  justify-content: center;
+  @include tablets {
+    display: flex;
+    min-height: 568px;
+    justify-content: flex-start;
+  }
 }
 
 .mobile-menu__item {
@@ -53,6 +55,16 @@
   background: $light;
   padding: 17px;
   padding-left: 20px;
+}
+
+.mobile-menu__item_close {
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu__item_no-js {
+  display: none;
 }
 
 .mobile-menu__link {
@@ -96,7 +108,7 @@
   top: -5px;
 }
 
-.main-nav-mobile__button {
+.main-nav__button {
   display: none;
 
   @include tablets {
@@ -110,12 +122,10 @@
   }
 }
 
-.main-nav-mobile__button_nojs {
-  @include tablets {
-    display: none;
-  }
+.main-nav__button_no-js {
+  display: none;
 }
 
-.main-nav-mobile__button_opened {
-  background: none;
+.main-nav__button_opened {
+  display: none;
 }

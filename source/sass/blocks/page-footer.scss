@@ -12,7 +12,7 @@
   }
 
   @include phones {
-    margin-top:  20px;
+    margin-top: 20px;
   }
 }
 
@@ -81,7 +81,6 @@
   @include phones {
     margin-left: 24px;
   }
-
 }
 
 .directions__center {
@@ -129,6 +128,10 @@
 
 .page-footer__link {
   color: $main-orange;
+
+  @include phones {
+    text-align: center;
+  }
 }
 
 .page-footer__link_email {
@@ -170,11 +173,5 @@
 
   @include tablets {
     display: inline;
-  }
-}
-
-.page-footer__link {
-  @include phones {
-    text-align: center;
   }
 }
