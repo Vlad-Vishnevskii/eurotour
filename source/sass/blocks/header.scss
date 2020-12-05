@@ -12,6 +12,7 @@
     padding: 0;
     padding-left: 20px;
     align-items: center;
+    min-height: 50px;
   }
 }
 
@@ -106,6 +107,12 @@
 
   @include phones {
     padding: 20px;
+  }
+}
+
+.main-nav-mobile__button_nojs {
+  @include tablets {
+    display: none;
   }
 }
 

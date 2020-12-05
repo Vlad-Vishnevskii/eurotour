@@ -1,0 +1,15 @@
+.submit {
+  text-transform: uppercase;
+  background: $main-orange;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $white;
+  padding: 15px 50px;
+
+  @include phones {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

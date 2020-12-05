@@ -1,0 +1,36 @@
+.input {
+  width: 269px;
+  height: 40px;
+  border: 1px solid $black-opacity-light;
+}
+
+.input_tel {
+  padding-left: 26px;
+  padding-right: 5px;
+  background-image: url("../img/star-icon.png");
+  background-repeat: no-repeat;
+  background-position-x: 15px;
+  background-position-y: 7px;
+}
+
+.input_email {
+  padding: 0 15px;
+}
+
+.input::-webkit-input-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+}
+
+.input::-moz-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+}

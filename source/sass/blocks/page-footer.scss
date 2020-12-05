@@ -2,10 +2,40 @@
   display: flex;
   margin-top: 170px;
   padding-bottom: 85px;
+
+  @include tablets {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    position: relative;
+    padding-bottom: 50px;
+    justify-content: center;
+  }
+
+  @include phones {
+    margin-top:  20px;
+  }
 }
 
+// .page-footer::after {
+//   content: "";
+//   width: 90%;
+//   height: 1px;
+//   position: absolute;
+//   background: $footer-border-grey;
+//   top: 260px;
+
+//   @include phones {
+//     width: 300px;
+//     display: none;
+//   }
+// }
+
 .page-footer__left {
-  width: 360px;
+  width: 310px;
+
+  @include tablets {
+    width: 380px;
+  }
 }
 
 .page-footer__title {
@@ -13,16 +43,25 @@
   font-size: 18px;
   line-height: 32px;
   color: $dark;
+
+  @include phones {
+    text-align: center;
+  }
 }
 
 .directions {
   margin: 0;
   padding: 0;
   list-style: none;
-  height: 150px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 10px;
+
+  @include phones {
+    padding: 0;
+  }
 }
 
 .directions__item {
@@ -32,6 +71,32 @@
   color: $grey-opacity-extra;
 }
 
+.directions__path-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.directions__left {
+  @include phones {
+    margin-left: 24px;
+  }
+
+}
+
+.directions__center {
+  @include phones {
+    margin-left: 52px;
+    margin-right: 32px;
+  }
+}
+
+.directions__right {
+  @include phones {
+    margin-left: 116px;
+  }
+}
+
 .page-footer__center {
   width: 390px;
   border-left: 1px solid $footer-border-grey;
@@ -39,6 +104,27 @@
   display: flex;
   flex-direction: column;
   padding-left: 80px;
+
+  @include tablets {
+    border-right: none;
+    width: 300px;
+    padding-left: 50px;
+  }
+
+  @include phones {
+    border-left: none;
+    border-top: 1px solid $footer-border-grey;
+    border-bottom: 1px solid $footer-border-grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+  }
+}
+
+.page-footer__center-title {
+  @include phones {
+    text-align: center;
+  }
 }
 
 .page-footer__link {
@@ -58,10 +144,37 @@
 .page-footer__right {
   width: 370px;
   padding-left: 49px;
+
+  @include tablets {
+    flex-grow: 2;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 50px;
+  }
 }
 
 .page-footer__right-text {
   font-size: 14px;
   line-height: 170%;
   color: $grey-opacity-extra;
+}
+
+.page-footer__email-desktop {
+  @include tablets {
+    display: none;
+  }
+}
+
+.page-footer__email-tablets {
+  display: none;
+
+  @include tablets {
+    display: inline;
+  }
+}
+
+.page-footer__link {
+  @include phones {
+    text-align: center;
+  }
 }

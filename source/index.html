@@ -35,21 +35,21 @@
           </a>
         </li>
       </ul>
-      <a class="main-nav-mobile__button" href="">
-        <svg class="main-nav-mobile__icon main-nav-mobile__icon_closed" width="30" height="30" viewBox="0 0 30 30"
+      <a class="main-nav-mobile__button" href="#">
+        <svg class="main-nav-mobile__icon visually-hidden main-nav-mobile__button_opened" width="30" height="30" viewBox="0 0 30 30"
           fill="none">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M3.75 21H26.25V20H3.75V21ZM3.75 14.75H26.25V13.75H3.75V14.75ZM3.75 7.5V8.5H26.25V7.5H3.75Z"
             fill="white" />
         </svg>
-        <svg class="main-nav-mobile__icon main-nav-mobile__icon_opend visually-hidden" width="24" height="25"
+        <svg class="main-nav-mobile__icon main-nav-mobile__icon_opend" width="24" height="25"
           viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 23.7213L23 1M23 23.7213L1 1" stroke="#141517" stroke-opacity="0.2" stroke-linecap="round"
             stroke-linejoin="round" />
         </svg>
       </a>
     </nav>
-    <ul class="main-nav-mobile__list mobile-menu">
+    <ul class="main-nav-mobile__list mobile-menu mobile-menu_open">
       <li class="mobile-menu__item">
         <a class="mobile-menu__link" href="#">
           О путешествии
@@ -476,7 +476,7 @@
       </div>
     </section>
     <section class="questions container">
-      <form class="questions__form" action="">
+      <form class="questions__form" action="https://echo.htmlacademy.ru">
         <h3 class="questions__title">
           У Вас остались вопросы?
         </h3>
@@ -484,10 +484,10 @@
           Оставьте свой номер или e-mail и мы свяжемся с Вами
         </p>
         <div class="questions__input-wrapper">
-          <input class="questions__input questions__input_tel" type="text" name="tel" placeholder="+7 Введите 10 цифр номера">
-          <input class="questions__input questions__input_email" type="email" name="email" placeholder="E-mail">
+          <input class="questions__input questions__input_tel input input_tel" type="text" name="tel" placeholder="+7 Введите 10 цифр номера">
+          <input class="questions__input questions__input_email input input_email" type="email" name="email" placeholder="E-mail">
         </div>
-        <input class="questions__submit" type="submit">
+        <input class="questions__submit submit" type="submit">
       </form>
     </section>
   </main>
@@ -498,21 +498,33 @@
         Следующие путешествия
       </h3>
       <ul class="page-footer__directions-list directions">
-        <li class="directions__item">Марсель</li>
-        <li class="directions__item">Ним</li>
-        <li class="directions__item">Монпелье</li>
-        <li class="directions__item">Барселона</li>
-        <li class="directions__item">Пальма</li>
-        <li class="directions__item">Сардиния</li>
-        <li class="directions__item">Палермо</li>
-        <li class="directions__item">Катания</li>
-        <li class="directions__item">Неаполь</li>
-        <li class="directions__item">Рим</li>
-        <li class="directions__item">Корс</li>
-        <li class="directions__item">Ницца</li>
-        <li class="directions__item">Монако</li>
-        <li class="directions__item">Динь-ле-Бен</li>
-        <li class="directions__item">Гренобль</li>
+        <li class="directions__left">
+          <ul class="directions__path-list directions__path-list_left">
+            <li class="directions__item">Марсель</li>
+            <li class="directions__item">Ним</li>
+            <li class="directions__item">Монпелье</li>
+            <li class="directions__item">Барселона</li>
+            <li class="directions__item">Пальма</li>
+          </ul>
+        </li>
+        <li class="directions__center">
+          <ul class="directions__path-list directions__path-list_center">
+            <li class="directions__item">Сардиния</li>
+            <li class="directions__item">Палермо</li>
+            <li class="directions__item">Катания</li>
+            <li class="directions__item">Неаполь</li>
+            <li class="directions__item">Рим</li>
+          </ul>
+        </li>
+        <li class="directions__right">
+          <ul class="directions__path-list directions__path-list_right">
+            <li class="directions__item">Корс</li>
+            <li class="directions__item">Ницца</li>
+            <li class="directions__item">Монако</li>
+            <li class="directions__item">Динь-ле-Бен</li>
+            <li class="directions__item">Гренобль</li>
+          </ul>
+        </li>
       </ul>
     </div>
     <div class="page-footer__center">
@@ -523,7 +535,8 @@
         <svg class="page-footer__icon-email" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M24.2273 0H1.77273C0.768182 0 0 0.764706 0 1.76471V18.2353C0 19.2353 0.768182 20 1.77273 20H24.2273C25.2318 20 26 19.2353 26 18.2353V1.76471C26 0.764706 25.2318 0 24.2273 0ZM24.2273 17L19.5591 12.3529C19.2045 12 18.6727 12 18.3182 12.3529C17.9636 12.7059 17.9636 13.2353 18.3182 13.5882L22.9864 18.2353H3.01362L7.68182 13.5882C8.03636 13.2353 8.03636 12.7059 7.68182 12.3529C7.32727 12 6.79547 12 6.44092 12.3529L1.77273 17V5.70585L12.4091 13.7059C12.5864 13.8236 12.7636 13.8823 12.9409 13.8823C13.1182 13.8823 13.2954 13.8236 13.4727 13.7059L24.2273 5.70585V17ZM24.2273 1.76471V3.4706L12.9409 11.8235L1.77273 3.4706V1.76471H24.2273Z" fill="#D7D9DF"/>
         </svg>
-        puteshestviemechta@gmail.ru
+        <span class="page-footer__email-desktop">puteshestviemechta@gmail.ru</span>
+        <span class="page-footer__email-tablets">Почта</span>
       </a>
       <a class="page-footer__link page-footer__link_tel" href="tel:+749978468446">
         <svg class="page-footer__icon-tel" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -544,6 +557,34 @@
     </div>
   </footer>
 
+  <div class="popup popup-buy">
+    <div class="popup-buy__background-wrapper"></div>
+    <form class="popup-buy__form" action="https://echo.htmlacademy.ru">
+      <a class="popup-buy__close-button" href="#">
+        <svg class="popup-buy__icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M1 23L23 1M23 23L1 1" stroke="#141517" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <h2 class="popup-buy__title">
+        Купить тур
+      </h2>
+      <input class="popup-buy__input input input_tel" type="text" name="telephone" placeholder="+7 Введите 10 цифр номера">
+      <input class="popup-buy__input input input_email" type="email" name="email" placeholder="E-mail">
+      <input class="popup-buy__submit submit" type="submit">
+    </form>
+  </div>
+
+  <div class="popup popup-success">
+    <a class="popup-success__close-button" href="#">
+      <svg class="popup-success__icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M1 23L23 1M23 23L1 1" stroke="#141517" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+      <p class="popup-success__text">
+        Форма успешно отправлена, спасибо! :)
+      </з>
+    </form>
+  </div>
 </body>
 
 </html>

@@ -49,62 +49,15 @@
   line-height: 150%;
 }
 
-.questions__input {
-  width: 269px;
-  height: 40px;
-  border: 1px solid $black-opacity-light;
-}
-
 .questions__input_tel {
-  padding-left: 26px;
-  padding-right: 5px;
   margin-right: 19px;
-  background: url("../img/star-icon.png") no-repeat;
-  background-position-x: 15px;
-  background-position-y: 7px;
 
   @include phones {
     margin-right: 0;
-    background-color: $white;
     margin-bottom: 20px;
   }
 }
 
-.questions__input_email {
-  padding: 0 15px;
-}
-
-.questions__input::-webkit-input-placeholder {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
-  color: $dark;
-}
-
-.questions__input::-moz-placeholder {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
-  color: $dark;
-}
-
 .questions__submit {
-  text-transform: uppercase;
-  background: $main-orange;
-  border: none;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: $white;
-  padding: 15px 50px;
   margin-top: 43px;
-
-  @include phones {
-    font-size: 10px;
-    line-height: 12px;
-  }
 }

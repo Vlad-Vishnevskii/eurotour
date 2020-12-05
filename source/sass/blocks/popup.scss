@@ -1,0 +1,100 @@
+.popup {
+  width: 728px;
+  min-height: 444px;
+  position: fixed;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $pink-light;
+  z-index: 6;
+  display: none;
+
+  @include tablets {
+    width: 100%;
+    min-height: 568px;
+  }
+
+  @include phones {
+    top: 100px;
+  }
+}
+
+.popup_show {
+  display: flex;
+}
+
+/* buy */
+
+.popup-buy__background-wrapper {
+  width: 338px;
+  background: url("../img/popup-img.jpg") no-repeat;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.popup-buy__form {
+  padding: 20px;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablets {
+    width: 100%;
+    padding: 16px;
+    background-color: $white;
+  }
+}
+
+.popup-buy__close-button {
+  align-self: flex-end;
+}
+
+.popup-buy__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 170%;
+  color: $black-popup;
+
+  @include tablets {
+    margin-top: 115px;
+  }
+
+  @include phones {
+    margin-top: 70px;
+  }
+}
+
+.popup-buy__input {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.popup-success {
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-success__close-button {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popup-success__text {
+  margin: auto 0;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 170%;
+  width: 399px;
+  text-align: center;
+
+  @include phones {
+    width: 100%;
+  }
+}
