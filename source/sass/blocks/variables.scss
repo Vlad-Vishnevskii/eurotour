@@ -22,8 +22,8 @@ $mobile-width-only: 767px;
 $mobile-width: 320px;
 
 //mobile mixin
-@mixin desktop {
-  @media screen and (max-width: 1921px) {
+@mixin desktop-min {
+  @media screen and (max-width: 1219px) {
     @content;
   }
 }

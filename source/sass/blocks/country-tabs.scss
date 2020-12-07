@@ -2,11 +2,18 @@
   background: url("../img/tabs-bg-desktop.png") no-repeat;
   background-position-x: 247px;
   background-position-y: 92px;
-  padding-bottom: 380px;
+  padding-bottom: 421px;
+  padding-top: 54px;
+
+  @include desktop-min {
+    display: flex;
+    justify-content: center;
+  }
 
   @include tablets {
     background: none;
     padding: 98px 0;
+    overflow: hidden;
   }
 }
 
@@ -18,11 +25,13 @@
   width: 899px;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 
   @include tablets {
-    width: 705px;
+    width: 908px;
     margin: 0 auto;
+    padding-left: 36px;
+    justify-content: initial;
   }
 
   @include phones {
@@ -38,16 +47,24 @@
   width: 899px;
   height: 2px;
   background: $black-opacity-light;
-  top: 40px;
+  top: 36px;
 
   @include tablets {
-    width: 705px;
+    width: 100%;
   }
 
   @include phones {
     width: 295px;
     left: 20px;
   }
+}
+
+.tabs-menu__item {
+  margin-right: 97px;
+}
+
+.tabs-menu__item:last-of-type {
+  margin-right: 0;
 }
 
 .tabs-menu__item:nth-of-type(3),
@@ -64,6 +81,10 @@
   line-height: 24px;
   text-decoration: none;
   color: $black-opacity-light;
+}
+
+.tabs-menu__link_active {
+  color: $main-orange;
 }
 
 .country-tabs__list {
@@ -88,6 +109,7 @@
   @include tablets {
     width: initial;
     margin-right: 0;
+    padding: 0 20px;
   }
 }
 
@@ -97,12 +119,17 @@
   line-height: 90px;
   color: $dark-main;
   position: relative;
+  letter-spacing: -1.245px;
+  margin-bottom: 49px;
 
   @include tablets {
     text-align: center;
     font-weight: 600;
     font-size: 30px;
     line-height: 150%;
+    margin-top: 46px;
+    margin-bottom: 22px;
+    letter-spacing: 0;
   }
 
   @include phones {
@@ -118,7 +145,7 @@
   width: 175px;
   height: 3px;
   background: $main-orange;
-  bottom: -10px;
+  bottom: -17px;
 
   @include tablets {
     display: none;
@@ -129,10 +156,15 @@
   font-size: 16px;
   line-height: 28px;
   color: $black-opacity;
+  width: 376px;
+  letter-spacing: -0.466px;
+  margin-bottom: 50px;
 
   @include tablets {
-    padding: 0 20px;
+    padding: 0;
     text-align: center;
+    width: initial;
+    margin-bottom: 19px;
   }
 }
 
@@ -149,6 +181,7 @@
   width: 250px;
   height: 75px;
   text-align: center;
+  letter-spacing: 2px;
 
   @include tablets {
     margin: 0 auto;
@@ -164,26 +197,35 @@
 .country-tabs__img {
   display: block;
   width: 100%;
+  margin-top: 43px;
+
+  @include tablets {
+    margin-top: 0;
+    padding: 0;
+  }
 }
 
 .feedback {
   position: absolute;
   width: 382px;
   background: $white;
-  top: 150px;
-  right: 100px;
-  padding: 30px;
+  top: 160px;
+  right: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
   @include tablets {
     width: 60%;
     height: 60%;
     min-width: 382px;
     max-width: 382px;
-    padding: 40px;
+    padding: 22px 29px;
     overflow: auto;
     margin: auto;
     position: absolute;
-    top: 0;
+    top: 58px;
     left: 0;
     bottom: -542px;
     right: 0;
@@ -199,11 +241,13 @@
 }
 
 .feedback__title {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 30px;
   line-height: 37px;
   color: $dark-main;
   position: relative;
+  margin-top: 8px;
+  letter-spacing: -0.691px;
 
   @include phones {
     text-align: center;
@@ -217,8 +261,13 @@
   width: 68px;
   height: 1px;
   background: $main-orange;
-  bottom: -10px;
-  left: 80px;
+  bottom: -14px;
+  left: -1px;
+
+  @include tablets {
+    left: 1px;
+    bottom: -12px;
+  }
 }
 
 .feedback__text {
@@ -226,9 +275,24 @@
   font-size: 14px;
   line-height: 28px;
   color: $black-opacity;
+  margin-top: 34px;
+  letter-spacing: -0.408333px;
+  width: 332px;
+  margin-bottom: 33px;
+
+  @include tablets {
+    width: 327px;
+    margin-bottom: 30px;
+  }
 
   @include phones {
     text-align: center;
+  }
+}
+
+.feedback__text-space {
+  @include tablets {
+    display: none;
   }
 }
 
@@ -236,13 +300,21 @@
   display: flex;
   align-items: center;
 
+  @include tablets {
+    padding-left: 2px;
+  }
+
   @include phones {
     flex-direction: column;
   }
 }
 
 .feedback__author-name {
-  margin-left: 20px;
+  margin-left: 14px;
+
+  @include tablets {
+    letter-spacing: -0.466px;
+  }
 
   @include phones {
     margin-top: 20px;

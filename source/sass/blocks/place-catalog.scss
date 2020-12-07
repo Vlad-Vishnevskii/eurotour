@@ -1,17 +1,27 @@
+.place-catalog {
+  padding-top: 154px;
+
+  @include desktop-min {
+    padding: 0 20px;
+  }
+}
+
 .place-catalog__title {
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
   width: 358px;
+  letter-spacing: -1.245px;
 
   @include tablets {
     margin: 0 auto;
-    width: 300px;
+    width: 295px;
     font-weight: 600;
     font-size: 30px;
     line-height: 150%;
     margin-top: 80px;
-    margin-bottom: 24px;
+    margin-bottom: 21px;
+    letter-spacing: 0.1px;
   }
 
   @include phones {
@@ -28,7 +38,7 @@
   width: 228px;
   height: 4px;
   background-color: $main-orange;
-  top: 20px;
+  top: 28px;
 
   @include tablets {
     display: none;
@@ -39,7 +49,9 @@
   font-size: 16px;
   line-height: 28px;
   color: $black-opacity;
-  width: 400px;
+  width: 379px;
+  margin-top: 61px;
+  letter-spacing: -0.466px;
 
   @include tablets {
     margin: 0 auto;
@@ -55,31 +67,43 @@
 .place-catalog__list {
   list-style: none;
   margin: 0;
+  margin-top: -27px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+  @include desktop-min {
+    justify-content: space-around;
+  }
 
   @include tablets {
-    justify-content: center;
+    margin-top: -24px;
+    padding-left: 61px;
+    padding-right: 61px;
+    justify-content: space-between;
   }
 }
 
 .place-catalog__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 101px;
+  margin-bottom: 40px;
   text-align: center;
+  margin-right: 60px;
+
+  @include desktop-min {
+    margin-right: 0;
+  }
 
   @include tablets {
-    margin-bottom: -30px;
+    margin-bottom: -47px;
     justify-content: start;
   }
 }
 
 .place-catalog__item:nth-of-type(1) {
   @include tablets {
-    margin-right: 29px;
+    margin-right: 0px;
   }
 
   @include phones {
@@ -88,6 +112,7 @@
 }
 
 .place-catalog__item:nth-of-type(3) {
+  margin-right: 0;
   @include tablets {
     margin-right: 29px;
   }
@@ -98,7 +123,13 @@
 }
 
 .place-catalog__item:nth-of-type(4) {
-  margin-left: 150px;
+  margin-left: 174px;
+  margin-right: 120px;
+
+  @include desktop-min {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   @include tablets {
     margin-left: 0;
@@ -106,10 +137,11 @@
 }
 
 .place-catalog__item:nth-of-type(5) {
-  margin-right: 150px;
-
   @include tablets {
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: 14px;
   }
 }
 
@@ -121,7 +153,8 @@
 .place-catalog__name {
   z-index: 5;
   background-color: $white;
-  padding: 17px 49px;
+  padding: 16px 0;
+  text-align: center;
   width: 215px;
   margin: 0 auto;
   font-weight: 500;

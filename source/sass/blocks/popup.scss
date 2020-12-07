@@ -59,6 +59,7 @@
   font-size: 25px;
   line-height: 170%;
   color: $black-popup;
+  margin-bottom: 52px;
 
   @include tablets {
     margin-top: 115px;
@@ -71,7 +72,15 @@
 
 .popup-buy__input {
   margin-bottom: 20px;
-  width: 100%;
+  width: 270px;
+  padding-top: 27px;
+  padding-bottom: 22px;
+}
+
+.popup-buy__submit {
+  letter-spacing: 2.7px;
+  width: 176px;
+  padding: 17px 0;
 }
 
 .popup-success {
@@ -87,7 +96,7 @@
 }
 
 .popup-success__text {
-  margin: auto 0;
+  margin-top: 139px;
   font-weight: 500;
   font-size: 25px;
   line-height: 170%;

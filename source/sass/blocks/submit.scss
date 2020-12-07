@@ -6,7 +6,8 @@
   font-size: 12px;
   line-height: 15px;
   color: $white;
-  padding: 15px 50px;
+  padding: 15px 0;
+  letter-spacing: 2px;
 
   @include phones {
     font-size: 10px;

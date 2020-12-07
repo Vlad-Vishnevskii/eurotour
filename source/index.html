@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>Путешествие по Европе</title>
   <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/Montserrat-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="./fonts/Montserrat-Italic.woff" as="font" type="font/woff" crossorigin>
@@ -17,7 +18,10 @@
 <body class="page__body">
   <header>
     <nav class="main-nav container">
-      <img class="main-nav__logo" src="../img/logo.png" width="57" height="22" alt="WAY">
+      <picture>
+        <source srcset="../img/logo-tablet.png" media="(max-width: 1023px)">
+        <img class="main-nav__logo" src="../img/logo.png" alt="WAY">
+      </picture>
       <ul class="main-nav__list menu-list">
         <li class="menu-list__item">
           <a class="menu-list__link" href="#">
@@ -36,7 +40,7 @@
         </li>
       </ul>
       <a class="main-nav__button" href="#">
-        <svg class="main-nav__icon" width="30" height="30" viewBox="0 0 30 30"
+        <svg class="main-nav__icon-burger" width="30" height="30" viewBox="0 0 30 30"
           fill="none">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M3.75 21H26.25V20H3.75V21ZM3.75 14.75H26.25V13.75H3.75V14.75ZM3.75 7.5V8.5H26.25V7.5H3.75Z"
@@ -162,9 +166,9 @@
     </section>
 
     <section class="country-tabs">
-      <div class="country-tabs__wrapper container">
+      <div class="country-tabs__wrapper container container-tablet-off">
         <ul class="country-tabs__menu-list tabs-menu">
-          <li class="tabs-menu__item"><a href="" class="tabs-menu__link">Греция</a></li>
+          <li class="tabs-menu__item"><a href="" class="tabs-menu__link tabs-menu__link_active">Греция</a></li>
           <li class="tabs-menu__item"><a href="" class="tabs-menu__link">Албания</a></li>
           <li class="tabs-menu__item"><a href="" class="tabs-menu__link">Македония</a></li>
           <li class="tabs-menu__item"><a href="" class="tabs-menu__link">Черногория</a></li>
@@ -195,7 +199,7 @@
             <div class="country-tabs__feedback feedback">
               <h3 class="feedback__title">Отзывы</h3>
               <p class="feedback__text">
-                Метеоры в Греции можно сравнить разве что с Монсерратт в Испании.
+                Метеоры в Греции можно сравнить разве что <span class="feedback__text-space">&nbsp</span> с  Монсерратт в Испании.
                 Такие же высоченные скалы. Но здесь потрясает масштаб.
                 Огромная территория, высоко в горах. Ощущение такое,
                 как будто стоишь на краю света!
@@ -488,7 +492,7 @@
           Оставьте свой номер или e-mail и мы свяжемся с Вами
         </p>
         <div class="questions__input-wrapper">
-          <input class="questions__input questions__input_tel input input_tel" type="text" name="tel" placeholder="+7 Введите 10 цифр номера">
+          <input class="questions__input questions__input_tel input input_tel" type="text" name="tel" placeholder="+7&nbsp Введите 10 цифр номера">
           <input class="questions__input questions__input_email input input_email" type="email" name="email" placeholder="E-mail">
         </div>
         <input class="questions__submit submit" type="submit">
@@ -532,7 +536,7 @@
       </ul>
     </div>
     <div class="page-footer__center">
-      <h3 class="page-footer__center-title">
+      <h3 class="page-footer__title page-footer__title_center">
         Наши контакты
       </h3>
       <a class="page-footer__link page-footer__link_email" href="mailto:puteshestviemechta@gmail.ru">
@@ -550,7 +554,7 @@
       </a>
     </div>
     <div class="page-footer__right">
-      <h3 class="page-footer__right-title">
+      <h3 class="page-footer__title page-footer__title_right">
         Корпоративные путешествия
       </h3>
       <p class="page-footer__right-text">
@@ -572,7 +576,7 @@
       <h2 class="popup-buy__title">
         Купить тур
       </h2>
-      <input class="popup-buy__input input input_tel" type="text" name="telephone" placeholder="+7 Введите 10 цифр номера">
+      <input class="popup-buy__input input input_tel" type="text" name="telephone" placeholder="+7&nbsp Введите 10 цифр номера">
       <input class="popup-buy__input input input_email" type="email" name="email" placeholder="E-mail">
       <input class="popup-buy__submit submit" type="submit">
     </form>

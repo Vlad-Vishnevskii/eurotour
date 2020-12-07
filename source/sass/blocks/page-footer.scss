@@ -1,14 +1,16 @@
 .page-footer {
   display: flex;
-  margin-top: 170px;
+  margin-top: 173px;
   padding-bottom: 85px;
+  padding-left: 10px;
 
   @include tablets {
     flex-wrap: wrap;
-    padding: 0 20px;
     position: relative;
     padding-bottom: 50px;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 81px;
+    padding-left: 20px;
   }
 
   @include phones {
@@ -16,25 +18,12 @@
   }
 }
 
-// .page-footer::after {
-//   content: "";
-//   width: 90%;
-//   height: 1px;
-//   position: absolute;
-//   background: $footer-border-grey;
-//   top: 260px;
-
-//   @include phones {
-//     width: 300px;
-//     display: none;
-//   }
-// }
-
 .page-footer__left {
-  width: 310px;
+  width: 390px;
+  padding-right: 10px;
 
   @include tablets {
-    width: 380px;
+    width: 396px;
   }
 }
 
@@ -43,6 +32,11 @@
   font-size: 18px;
   line-height: 32px;
   color: $dark;
+  margin-top: 0;
+
+  @include tablets {
+    margin-bottom: 21px;
+  }
 
   @include phones {
     text-align: center;
@@ -56,8 +50,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-right: 10px;
+
+  @include desktop-min {
+    justify-content: space-around;
+  }
+
+  @include tablets {
+    justify-content: initial;
+  }
 
   @include phones {
     padding: 0;
@@ -78,12 +78,32 @@
 }
 
 .directions__left {
+  margin-right: 53px;
+
+  @include desktop-min {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 47px;
+  }
+
   @include phones {
     margin-left: 24px;
   }
 }
 
 .directions__center {
+  margin-right: 50px;
+
+  @include desktop-min {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 50px;
+  }
+
   @include phones {
     margin-left: 52px;
     margin-right: 32px;
@@ -102,12 +122,18 @@
   border-right: 1px solid $footer-border-grey;
   display: flex;
   flex-direction: column;
-  padding-left: 80px;
+  padding-left: 90px;
+
+  @include desktop-min {
+    padding-left: 0;
+    align-items: center;
+  }
 
   @include tablets {
     border-right: none;
     width: 300px;
-    padding-left: 50px;
+    padding-left: 49px;
+    align-items: flex-start;
   }
 
   @include phones {
@@ -120,7 +146,11 @@
   }
 }
 
-.page-footer__center-title {
+.page-footer__title_center {
+  @include tablets {
+    margin-bottom: 17px;
+  }
+
   @include phones {
     text-align: center;
   }
@@ -142,6 +172,15 @@
 .page-footer__link_tel {
   font-size: 16px;
   line-height: 32px;
+  margin-top: 10px;
+}
+
+.page-footer__icon-email {
+  margin-right: 10px;
+}
+
+.page-footer__icon-tel {
+  margin-right: 6px;
 }
 
 .page-footer__right {
@@ -152,11 +191,16 @@
     flex-grow: 2;
     padding-left: 0;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 48px;
   }
 }
 
+.page-footer__title_right {
+  margin-bottom: 24px;
+}
+
 .page-footer__right-text {
+  margin-top: 0;
   font-size: 14px;
   line-height: 170%;
   color: $grey-opacity-extra;

@@ -1,18 +1,29 @@
 .main-nav {
   display: flex;
-  padding: 39px;
-  justify-content: space-between;
+  padding: 31px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: $dark;
+  align-items: center;
+
+  @include desktop-min {
+    justify-content: space-around;
+  }
 
   @include tablets {
     padding: 0;
     padding-left: 20px;
-    align-items: center;
+    align-items: initial;
     min-height: 50px;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__logo {
+  @include tablets {
+    margin-top: 18px;
   }
 }
 
@@ -21,10 +32,26 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-left: 624px;
+  margin-top: 4px;
+  align-items: baseline;
+
+  @include desktop-min {
+    margin-left: 0;
+  }
 
   @include tablets {
     display: none;
   }
+}
+
+.menu-list__link {
+  color: $dark;
+}
+
+.menu-list__link_tel {
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .mobile-menu {
@@ -104,17 +131,20 @@
   background: url("../img/phone.svg");
   width: 30px;
   height: 30px;
-  left: -35px;
-  top: -5px;
+  left: -39px;
+  top: -2px;
 }
 
 .main-nav__button {
   display: none;
 
   @include tablets {
-    display: block;
+    display: flex;
     background-color: $main-orange;
-    padding: 30px;
+    width: 72px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
   }
 
   @include phones {
