@@ -11,6 +11,10 @@
     width: 100%;
     padding: 0 20px;
   }
+
+  @include tablets {
+    padding: 0 16px;
+  }
 }
 
 .container-tablet-off {

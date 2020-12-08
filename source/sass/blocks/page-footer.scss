@@ -14,7 +14,9 @@
   }
 
   @include phones {
-    margin-top: 20px;
+    margin-top: 69px;
+    padding-left: 16px;
+    justify-content: center;
   }
 }
 
@@ -24,6 +26,11 @@
 
   @include tablets {
     width: 396px;
+  }
+
+  @include phones {
+    padding-right: 0;
+    width: 300px;
   }
 }
 
@@ -39,7 +46,7 @@
   }
 
   @include phones {
-    text-align: center;
+    margin-left: 15px;
   }
 }
 
@@ -69,6 +76,10 @@
   font-size: 14px;
   line-height: 17px;
   color: $grey-opacity-extra;
+
+  @include phones {
+    text-align: center;
+  }
 }
 
 .directions__path-list {
@@ -89,7 +100,8 @@
   }
 
   @include phones {
-    margin-left: 24px;
+    margin-left: 22px;
+    margin-right: 25px;
   }
 }
 
@@ -112,7 +124,8 @@
 
 .directions__right {
   @include phones {
-    margin-left: 116px;
+    margin-top: 12px;
+    margin-left: 92px;
   }
 }
 
@@ -138,11 +151,36 @@
 
   @include phones {
     border-left: none;
-    border-top: 1px solid $footer-border-grey;
-    border-bottom: 1px solid $footer-border-grey;
-    padding-top: 20px;
+    padding-top: 38px;
     padding-bottom: 20px;
     padding-left: 0;
+    position: relative;
+  }
+}
+
+.page-footer__center::before {
+  @include phones {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: $footer-border-grey;
+    height: 1px;
+    width: 100%;
+    top: 8px;
+    left: -5px;
+  }
+}
+
+.page-footer__center::after {
+  @include phones {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: $footer-border-grey;
+    height: 1px;
+    width: 100%;
+    bottom: 6px;
+    left: -5px;
   }
 }
 
@@ -152,7 +190,7 @@
   }
 
   @include phones {
-    text-align: center;
+    margin-left: 63px;
   }
 }
 
@@ -167,12 +205,20 @@
 .page-footer__link_email {
   font-size: 14px;
   line-height: 17px;
+
+  @include phones {
+    margin-left: 97px;
+  }
 }
 
 .page-footer__link_tel {
   font-size: 16px;
   line-height: 32px;
   margin-top: 10px;
+
+  @include phones {
+    margin-left: 34px;
+  }
 }
 
 .page-footer__icon-email {
@@ -193,10 +239,20 @@
     text-align: center;
     margin-top: 48px;
   }
+
+  @include phones {
+    padding-left: 0;
+    margin-top: 23px;
+  }
 }
 
 .page-footer__title_right {
   margin-bottom: 24px;
+
+  @include phones {
+    margin-left: 1px;
+    margin-bottom: 25px;
+  }
 }
 
 .page-footer__right-text {
@@ -204,6 +260,10 @@
   font-size: 14px;
   line-height: 170%;
   color: $grey-opacity-extra;
+
+  @include phones {
+    letter-spacing: -0.1px;
+  }
 }
 
 .page-footer__email-desktop {
