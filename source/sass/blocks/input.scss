@@ -2,6 +2,12 @@
   width: 269px;
   height: 40px;
   border: 1px solid $black-opacity-light;
+  position: relative;
+  overflow: visible;
+
+  &:invalid {
+    border-color: $main-orange;
+  }
 }
 
 .input_tel {

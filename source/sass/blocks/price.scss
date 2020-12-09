@@ -15,6 +15,10 @@
     width: 100%;
     padding: 0 20px;
   }
+
+  @include phones {
+    margin-top: -14px;
+  }
 }
 
 .price__list {
@@ -39,6 +43,27 @@
   border: 1px solid $black-opacity-light;
   background: white;
   border-radius: 6px;
+
+  &:hover {
+    border-color: $main-orange;
+  }
+
+  &:hover .price__title-card {
+    color: $main-orange;
+  }
+
+  &:hover .price__value {
+    color: $main-orange;
+  }
+
+  &:hover .price__card-text::after {
+    background: $main-orange;
+    opacity: 0.5;
+  }
+
+  &:hover .included__icon-path {
+    fill: $dark;
+  }
 
   @include tablets {
     margin-top: 26px;
@@ -197,7 +222,6 @@
   @include tablets {
     left: 3px;
   }
-
 }
 
 .price__buy-button {
@@ -214,6 +238,10 @@
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
+
+  &:hover {
+    background: $hover-orange;
+  }
 
   @include tablets {
     position: absolute;

@@ -8,15 +8,15 @@
     flex-wrap: wrap;
     position: relative;
     padding-bottom: 50px;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 81px;
     padding-left: 20px;
   }
 
   @include phones {
+    margin-left: 0;
     margin-top: 69px;
     padding-left: 16px;
-    justify-content: center;
   }
 }
 
@@ -26,9 +26,11 @@
 
   @include tablets {
     width: 396px;
+    margin-left: -30px;
   }
 
   @include phones {
+    margin-left: 0;
     padding-right: 0;
     width: 300px;
   }

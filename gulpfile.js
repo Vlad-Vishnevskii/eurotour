@@ -35,16 +35,6 @@ const styles = () => {
 
 exports.styles = styles;
 
-// js-min
-
-// const js_min = () => {
-//   return gulp.src('source/js/*.js')
-//     .pipe (uglify())
-//     .pipe (gulp.dest("build/js"))
-// }
-
-//exports.js_min = js_min;
-
 // html-min
 
 const html_min = () => {
@@ -76,42 +66,17 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html_min")).on("change", sync.reload);
-//   gulp.watch("source/js/*.js", gulp.series("js_min")).on("change", sync.reload);
 }
-
-// images
-
-// const images = () => {
-//   return gulp.src("source/img/**/*.{jpg,png,svg}")
-//     .pipe(imagemin([
-//       imagemin.optipng({optimizationLevel: 3}),
-//       imagemin.mozjpeg({progressive: true}),
-//       imagemin.svgo()
-//     ]))
-// }
-
-//exports.images = images;
 
 //webp
 
-// const webp_convert = () => {
-//   return gulp.src("source/img/**/*.{png,jpg}")
-//     .pipe(webp({quality: 90}))
-//     .pipe(gulp.dest("source/img"))
-// }
+const webp_convert = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"))
+}
 
-// exports.webp_convert = webp_convert;
-
-// svg-sprite
-
-// const sprite = () => {
-//   return gulp.src("source/img/**/icon-*.svg")
-//     .pipe(svgstore())
-//     .pipe(rename("sprite.svg"))
-//     .pipe(gulp.dest("build/img"))
-// }
-
-// exports.sprite = sprite;
+exports.webp_convert = webp_convert;
 
 //copy
 
@@ -141,8 +106,7 @@ const build  =  gulp.series(
   clean,
   copy,
   styles,
-  //sprite,
-  //js_min,
+  webp_convert,
   html_min
 )
 

@@ -1,5 +1,6 @@
 .description {
   background: url("../img/description-bg.jpg") no-repeat;
+  background-color: $description-bg;
   min-height: 860px;
   color: white;
   background-size: cover;
@@ -13,6 +14,7 @@
   }
 
   @include phones {
+    background-color: $white;
     background: url("../img/description-bg-mobile.jpg") no-repeat;
     min-height: initial;
     background-size: 100% 235px;
@@ -103,6 +105,10 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 2px;
+
+  &:hover {
+    background-color: $hover-orange;
+  }
 
   @include tablets {
     width: 250px;

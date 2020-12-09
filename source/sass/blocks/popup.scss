@@ -66,21 +66,28 @@
   }
 
   @include phones {
-    margin-top: 70px;
+    margin-top: 52px;
   }
 }
 
 .popup-buy__input {
   margin-bottom: 20px;
-  width: 270px;
   padding-top: 27px;
   padding-bottom: 22px;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .popup-buy__submit {
   letter-spacing: 2.7px;
   width: 176px;
   padding: 17px 0;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .popup-success {

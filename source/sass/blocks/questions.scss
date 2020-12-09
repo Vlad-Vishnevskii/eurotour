@@ -14,6 +14,7 @@
     background-size: cover;
     display: flex;
     justify-content: center;
+    background-color: $questions-bg;
   }
 
   @include phones {
@@ -114,6 +115,10 @@
   padding-right: 0;
   text-transform: uppercase;
   width: 176px;
+
+  &:hover {
+    background: $hover-orange;
+  }
 
   @include tablets {
     width: 250px;

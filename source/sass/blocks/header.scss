@@ -51,6 +51,10 @@
 
 .menu-list__link {
   color: $dark;
+
+  &:hover {
+    color: $main-orange;
+  }
 }
 
 .menu-list__link_tel {
@@ -82,16 +86,22 @@
 }
 
 .mobile-menu__item {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   background: $light;
   padding: 17px;
-  padding-left: 20px;
+  padding-top: 19px;
+  padding-left: 18px;
 }
 
 .mobile-menu__item_close {
   background: none;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 71px;
+}
+
+.mobile-menu__icon-link {
+  margin-top: 4px;
 }
 
 .mobile-menu__item_no-js {
@@ -107,7 +117,6 @@
   line-height: 140%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
 }
 
 .menu-list__item:first-of-type {
@@ -137,6 +146,10 @@
   height: 30px;
   left: -39px;
   top: -2px;
+}
+
+.menu-list__link_tel:hover::before {
+  background: url("../img/phone-orange.svg");
 }
 
 .main-nav__button {

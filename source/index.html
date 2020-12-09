@@ -24,12 +24,12 @@
       </picture>
       <ul class="main-nav__list menu-list">
         <li class="menu-list__item">
-          <a class="menu-list__link" href="#">
+          <a class="menu-list__link" href="#country">
             О путешествии
           </a>
         </li>
         <li class="menu-list__item">
-          <a class="menu-list__link" href="#">
+          <a class="menu-list__link" href="#price">
             Цены
           </a>
         </li>
@@ -59,9 +59,9 @@
         </a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">
+        <a class="mobile-menu__link" href="#country">
           О путешествии
-          <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
+          <svg class="mobile-menu__icon-link" width="25" height="25" viewBox="0 0 25 25" fill="none">
             <g clip-path="url(#clip0)">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7.4L13.6 12L9 16.6L10.4 18L16.4 12L10.4 6L9 7.4Z"
                 fill="#2C2E3F" fill-opacity="0.5" />
@@ -75,9 +75,9 @@
         </a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">
+        <a class="mobile-menu__link" href="#price">
           Цены
-          <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
+          <svg class="mobile-menu__icon-link" width="25" height="25" viewBox="0 0 25 25" fill="none">
             <g clip-path="url(#clip0)">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7.4L13.6 12L9 16.6L10.4 18L16.4 12L10.4 6L9 7.4Z"
                 fill="#2C2E3F" fill-opacity="0.5" />
@@ -104,7 +104,7 @@
           новом свете. Вас ждет: море, горы, а также
           потрясающая красота природы.
         </p>
-        <a class="description__link" href="">
+        <a class="description__link" href="#country">
           Смотреть тур
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -123,49 +123,60 @@
       </p>
       <ul class="place-catalog__list">
         <li class="place-catalog__item">
-          <picture>
-            <source srcset="../img/greece-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="../img/greece-tablet.jpg" media="(max-width: 1023px)">
-            <img class="place-catalog__img" src="../img/greece-desktop.jpg" alt="Greece">
-          </picture>
-          <span class="place-catalog__name">Греция</span>
+          <a class="place-catalog__link" href="#country">
+            <picture>
+              <source srcset="../img/greece-mobile.jpg" media="(max-width: 767px)">
+              <source srcset="../img/greece-tablet.jpg" media="(max-width: 1023px)">
+              <img class="place-catalog__img" src="../img/greece-desktop.jpg" alt="Greece">
+            </picture>
+            <span class="place-catalog__name">Греция</span>
+          </a>
         </li>
         <li class="place-catalog__item">
-          <picture>
-            <source srcset="../img/albany-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="../img/albany-tablet.jpg" media="(max-width: 1023px)">
-            <img class="place-catalog__img" src="../img/albany-desktop.jpg" alt="Albany">
-          </picture>
-          <span class="place-catalog__name">Албания</span>
+          <a class="place-catalog__link" href="#country">
+            <picture>
+              <source srcset="../img/albany-mobile.jpg" media="(max-width: 767px)">
+              <source srcset="../img/albany-tablet.jpg" media="(max-width: 1023px)">
+              <img class="place-catalog__img" src="../img/albany-desktop.jpg" alt="Albany">
+            </picture>
+            <span class="place-catalog__name">Албания</span>
+          </a>
         </li>
         <li class="place-catalog__item">
-          <picture>
-            <source srcset="../img/macedonia-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="../img/macedonia-tablet.jpg" media="(max-width: 1023px)">
-            <img class="place-catalog__img" src="../img/macedonia-desktop.jpg" alt="Macedonia">
-          </picture>
-          <span class="place-catalog__name">Македония</span>
+          <a class="place-catalog__link" href="#country">
+            <picture>
+              <source srcset="../img/macedonia-mobile.jpg" media="(max-width: 767px)">
+              <source srcset="../img/macedonia-tablet.jpg" media="(max-width: 1023px)">
+              <img class="place-catalog__img" src="../img/macedonia-desktop.jpg" alt="Macedonia">
+            </picture>
+            <span class="place-catalog__name">Македония</span>
+          </a>
         </li>
         <li class="place-catalog__item">
-          <picture>
-            <source srcset="../img/montenegro-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="../img/montenegro-tablet.jpg" media="(max-width: 1023px)">
-            <img class="place-catalog__img" src="../img/montenegro-desktop.jpg" alt="Montenegro">
-          </picture>
-          <span class="place-catalog__name">Черногория</span>
+          <a class="place-catalog__link" href="#country">
+            <picture>
+              <source srcset="../img/montenegro-mobile.jpg" media="(max-width: 767px)">
+              <source srcset="../img/montenegro-tablet.jpg" media="(max-width: 1023px)">
+              <img class="place-catalog__img" src="../img/montenegro-desktop.jpg" alt="Montenegro">
+            </picture>
+            <span class="place-catalog__name">Черногория</span>
+          </a>
         </li>
         <li class="place-catalog__item">
-          <picture>
-            <source srcset="../img/croatia-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="../img/croatia-tablet.jpg" media="(max-width: 1023px)">
-            <img class="place-catalog__img" src="../img/croatia-desktop.jpg" alt="Croatia">
-          </picture>
-          <span class="place-catalog__name">Хорватия</span>
+          <a class="place-catalog__link" href="#country">
+            <picture>
+              <source srcset="../img/croatia-mobile.jpg" media="(max-width: 767px)">
+              <source srcset="../img/croatia-tablet.jpg" media="(max-width: 1023px)">
+              <img class="place-catalog__img" src="../img/croatia-desktop.jpg" alt="Croatia">
+            </picture>
+            <span class="place-catalog__name">Хорватия</span>
+          </a>
         </li>
       </ul>
     </section>
 
     <section class="country-tabs">
+      <a name="country"></a>
       <div class="country-tabs__wrapper container container-tablet-off">
         <ul class="country-tabs__menu-list tabs-menu">
           <li class="tabs-menu__item"><a href="" class="tabs-menu__link tabs-menu__link_active">Греция</a></li>
@@ -177,9 +188,10 @@
         <ul class="country-tabs__list">
           <li class="country-tabs__item">
             <div class="country-tabs__left-wrapper">
-              <h3 class="country-tabs__title">
-                Греция
-              </h3>
+                <a name="Greece"></a>
+                <h3 class="country-tabs__title">
+                  Греция
+                </h3>
               <p class="country-tabs__text">
                 На севере Греции находится один из крупнейших комплексов монастырей,
                 расположенных на вершинах скал. Название его «Метеора» буквально переводится
@@ -187,7 +199,7 @@
                 После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров,
                 наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
               </p>
-              <a class="country-tabs__buy-button" href="">
+              <a class="country-tabs__buy-button" href="#">
                 Купить тур сейчас
               </a>
             </div>
@@ -343,6 +355,7 @@
       </div>
     </section>
     <section class="price container">
+      <a name="price"></a>
       <ul class="price__list">
         <li class="price__item">
           <div class="price__wrapper-top">
@@ -358,9 +371,8 @@
           </p>
           <ul class="price__included included">
             <li class="included__item">
-              <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+              <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none">
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -369,7 +381,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -378,7 +390,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -387,7 +399,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -414,7 +426,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -423,7 +435,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -432,7 +444,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -441,7 +453,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -450,7 +462,7 @@
             <li class="included__item">
               <svg class="included__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="included__icon-path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z"
                   fill="#FE7865" />
               </svg>
@@ -492,8 +504,12 @@
           Оставьте свой номер или e-mail и мы свяжемся с Вами
         </p>
         <div class="questions__input-wrapper">
-          <input class="questions__input questions__input_tel input input_tel" type="text" name="tel" placeholder="+7&nbsp Введите 10 цифр номера">
-          <input class="questions__input questions__input_email input input_email" type="email" name="email" placeholder="E-mail">
+          <label>
+            <input class="questions__input questions__input_tel input input_tel" type="text" id="tel" name="tel" placeholder="+7&nbsp Введите 10 цифр номера">
+          </label>
+          <label>
+            <input class="questions__input questions__input_email input input_email" type="email" name="email" placeholder="E-mail">
+          </label>
         </div>
         <input class="questions__submit submit" type="submit">
       </form>
