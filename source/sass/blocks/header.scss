@@ -51,6 +51,7 @@
 
 .menu-list__link {
   color: $dark;
+  text-decoration: none;
 
   &:hover {
     color: $main-orange;
@@ -60,6 +61,8 @@
 .menu-list__link_tel {
   font-size: 18px;
   line-height: 32px;
+  text-decoration: underline;
+  position: relative;
 }
 
 .mobile-menu {
@@ -127,16 +130,6 @@
   margin-right: 90px;
 }
 
-.menu-list__link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.menu-list__link_tel {
-  text-decoration: underline;
-  position: relative;
-}
-
 .menu-list__link_tel::before {
   position: absolute;
   display: block;
@@ -166,7 +159,6 @@
 
   @include phones {
     width: 50px;
-
   }
 }
 
