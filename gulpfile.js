@@ -14,6 +14,7 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const uglify = require("gulp-uglify");
 const htmlmin = require("gulp-htmlmin");
+const babel = require('gulp-babel');
 
 // Styles
 
@@ -34,6 +35,18 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+// js-min
+
+const js_min = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(babel({
+    presets: ['@babel/env']
+    }))
+    .pipe (gulp.dest("build/js"))
+}
+
+exports.js_min = js_min;
 
 // html-min
 
@@ -66,6 +79,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html_min")).on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series("js_min")).on("change", sync.reload);
 }
 
 //webp
@@ -106,7 +120,7 @@ const build  =  gulp.series(
   clean,
   copy,
   styles,
-  webp_convert,
+  js_min,
   html_min
 )
 

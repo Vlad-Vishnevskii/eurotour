@@ -4,7 +4,7 @@
   min-height: 455px;
   display: flex;
   align-items: center;
-  margin-top: 88px;
+  margin-top: 93px;
   position: relative;
 
   @include tablets {
@@ -33,7 +33,10 @@
   min-height: 315px;
   top: 70px;
   right: -10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 37px;
 
   @include tablets {
     position: static;
@@ -46,8 +49,8 @@
     width: 100%;
     box-shadow: none;
     padding-bottom: 50px;
-    margin-right: initial;
-    margin-left: initial;
+    // margin-right: initial;
+    // margin-left: initial;
   }
 }
 
@@ -61,6 +64,8 @@
 
   @include tablets {
     margin-bottom: 13px;
+    text-align: center;
+
   }
 
   @include phones {
@@ -78,6 +83,7 @@
 
   @include tablets {
     margin-bottom: 24px;
+    text-align: center;
   }
 
   @include phones {
@@ -85,8 +91,21 @@
   }
 }
 
+.questions__input-wrapper {
+  display: flex;
+  width: 557px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include phones {
+    display: block;
+    width: 100%;
+  }
+}
+
 .questions__input {
-  padding-top: 9px;
+  padding-top: 2px;
+  height: 46px;
 
   @include tablets {
     padding-top: 5px;
@@ -99,8 +118,6 @@
 }
 
 .questions__input_tel {
-  margin-right: 15px;
-
   @include phones {
     margin-right: 0;
     margin-bottom: 20px;
@@ -108,7 +125,7 @@
 }
 
 .questions__submit {
-  margin-top: 38px;
+  margin-top: 28px;
   letter-spacing: 2.7px;
   padding-left: 0;
   padding-right: 0;
@@ -129,6 +146,6 @@
   }
 
   @include phones {
-    width: 100%;
+    width: 288px;
   }
 }

@@ -1,0 +1,115 @@
+.menu-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 581px;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  @include desktop-min {
+    margin-left: 0;
+  }
+
+  @include tablets {
+    display: none;
+    order: 5;
+    flex-direction: column;
+    flex-grow: 2;
+    min-height: 568px;
+  }
+}
+
+.menu-list__item {
+  margin-right: 40px;
+
+  @include tablets {
+    margin-bottom: 24px;
+    background: $light;
+    width: 100%;
+    padding: 17px;
+    padding-top: 19px;
+    padding-left: 18px;
+  }
+}
+
+.menu-list__item_close {
+  @include tablets {
+    background: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.menu-list__item_hidden {
+  @include tablets {
+    display: none;
+  }
+}
+
+.menu-list__link {
+  color: $dark;
+  text-decoration: none;
+
+  &:hover {
+    color: $main-orange;
+  }
+
+  @include tablets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu-list__link_tel {
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: underline;
+  position: relative;
+}
+
+.menu-list__icon-link {
+  display: none;
+
+  @include tablets {
+    margin-top: 4px;
+    display: block;
+  }
+}
+
+.menu-list__item:nth-of-type(3) {
+  margin-right: 91px;
+}
+
+.menu-list__item:nth-of-type(4) {
+  margin-right: 0;
+}
+
+.menu-list__link_tel::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background: url("../img/phone.svg");
+  width: 30px;
+  height: 30px;
+  left: -39px;
+  top: -2px;
+}
+
+.menu-list__link_tel:hover::before {
+  background: url("../img/phone-orange.svg");
+}
+
+.menu-list_open {
+  @include tablets {
+    display: flex;
+  }
+}
+
+.menu-list_no-js {
+  @include tablets {
+    display: flex;
+  }
+}

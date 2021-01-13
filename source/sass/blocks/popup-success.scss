@@ -1,0 +1,27 @@
+.popup-success {
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-image: none;
+}
+
+.popup-success__close-button {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  background: none;
+  border: none;
+}
+
+.popup-success__text {
+  margin-top: 139px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 170%;
+  width: 399px;
+  text-align: center;
+
+  @include phones {
+    width: 100%;
+  }
+}

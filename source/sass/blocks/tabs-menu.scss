@@ -1,0 +1,49 @@
+.tabs-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  position: relative;
+  margin-bottom: 50px;
+  border-bottom: 2px solid $black-opacity-light;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+
+  @include tablets {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 36px;
+    flex-wrap: nowrap;
+  }
+
+
+  @include phones {
+    width: 100%;
+    padding-left: 16px;
+  }
+}
+
+.tabs-menu__item {
+  margin-right: 97px;
+}
+
+.tabs-menu__item:last-of-type,
+.tabs-menu__item:nth-of-type(6) {
+  margin-right: 0;
+}
+
+.tabs-menu__link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $black-opacity-light;
+
+  &:hover {
+    color: $hover-orange;
+  }
+}
+
+.tabs-menu__link_active {
+  color: $main-orange;
+}

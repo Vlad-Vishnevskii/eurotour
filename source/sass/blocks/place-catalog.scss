@@ -72,17 +72,17 @@
 .place-catalog__list {
   list-style: none;
   margin: 0;
-  margin-top: -27px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 54px;
 
   @include desktop-min {
     justify-content: space-around;
   }
 
   @include tablets {
-    margin-top: -24px;
+    margin-top: 40px;
     padding-left: 61px;
     padding-right: 61px;
     justify-content: center;
@@ -90,46 +90,59 @@
 
   @include phones {
     padding: 0;
-    margin-top: -46px;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .place-catalog__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 37px;
+  margin-bottom: 102px;
   text-align: center;
   margin-right: 60px;
   position: relative;
+  min-height: 430px;
+  min-width: 350px;
 
   @include desktop-min {
     margin-right: 0;
   }
 
   @include tablets {
-    margin-bottom: -48px;
     justify-content: start;
+    min-width: 288px;
+    margin-bottom: 14px;
   }
 
   @include phones {
-    margin-bottom: 0;
-    margin-top: -33px;
+    margin-bottom: 10px;
+    margin-right: 0;
   }
+}
 
-  &:hover::before {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 266px;
-    height: 77px;
-    content: "СМОТРЕТЬ ПОДРОБНЕЕ";
-    color: $white;
-    border: 1px solid $white;
-    top: 250px;
-    left: 50px;
-    z-index: 5;
-    opacity: 0.7;
+.place-catalog__link-name {
+  position: absolute;
+  font-size: 14px;
+  line-height: 17px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 266px;
+  height: 77px;
+  color: $white;
+  border: 1px solid $white;
+  top: 155px;
+  left: 50px;
+  z-index: 5;
+  opacity: 0.7;
+  text-transform: uppercase;
+
+  @include tablets {
+    width: 224px;
+    height: 49px;
+    top: 193px;
+    left: 35px;
   }
 }
 
@@ -140,6 +153,10 @@
   line-height: 29px;
   text-decoration: none;
   color: $dark-main;
+
+  &:hover .place-catalog__link-name {
+    display: flex;
+  }
 }
 
 .place-catalog__link:hover {
@@ -152,8 +169,8 @@
   }
 
   @include phones {
-    margin-right: 0;
     margin-top: 0;
+    margin-right: 0;
   }
 }
 
@@ -181,6 +198,10 @@
   @include tablets {
     margin-left: 0;
   }
+
+  @include phones {
+    margin-right: 0;
+  }
 }
 
 .place-catalog__item:nth-of-type(5) {
@@ -192,16 +213,19 @@
   }
 
   @include phones {
-    margin-top: -29px;
+    margin: 0;
+    margin-right: 0;
   }
 }
 
 .place-catalog__img {
-  position: relative;
-  top: 63px;
+  display: block;
 }
 
 .place-catalog__name {
+  position: absolute;
+  bottom: 0;
+  left: 67px;
   z-index: 5;
   background-color: $white;
   padding: 16px 0;
@@ -212,4 +236,9 @@
   font-size: 24px;
   line-height: 29px;
   color: $dark-main;
+
+  @include tablets {
+    left: 35px;
+    bottom: 4px;
+  }
 }

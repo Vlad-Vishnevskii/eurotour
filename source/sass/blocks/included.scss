@@ -1,0 +1,29 @@
+.included {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.included__item {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 32px;
+  color: $dark-main;
+  position: relative;
+  padding-left: 28px;
+
+  @include tablets {
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.included__icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+
+  @include tablets {
+    left: 3px;
+  }
+}

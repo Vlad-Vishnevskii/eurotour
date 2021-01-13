@@ -16,36 +16,3 @@ $black-shadow: rgba(41, 54, 66, 0.1);
 $pink-light: #fbf8f8;
 $footer-border-grey: #d7d9df;
 $black-popup: #48494d;
-
-// Viewports
-
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$mobile-width-only: 767px;
-$mobile-width: 320px;
-
-//mobile mixin
-@mixin desktop-min {
-  @media screen and (max-width: 1219px) {
-    @content;
-  }
-}
-
-@mixin tablets {
-  @media screen and (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin phones {
-  @media screen and (max-width: 767px) {
-    @content;
-  }
-}
-
-// retina mixin
-@mixin retina {
-  @media screen and (min-resolution: 2dppx) {
-    @content;
-  }
-}

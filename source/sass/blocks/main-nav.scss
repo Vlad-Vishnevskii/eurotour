@@ -1,0 +1,85 @@
+.main-nav {
+  display: flex;
+  padding: 36px 0;
+  padding-bottom: 31px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+  align-items: center;
+
+  @include desktop-min {
+    justify-content: space-around;
+  }
+
+  @include tablets {
+    padding: 0;
+    align-items: initial;
+    min-height: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__logo {
+  @include tablets {
+    margin-left: 0;
+    margin-top: 18px;
+  }
+}
+
+.main-nav__wrapper {
+  @include tablets {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  @include phones {
+    padding-left: 16px;
+  }
+}
+
+.main-nav__button {
+  display: none;
+
+  @include tablets {
+    display: flex;
+    background-color: $main-orange;
+    width: 72px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+
+  @include phones {
+    width: 50px;
+  }
+}
+
+.main-nav__button_no-js {
+  display: none;
+}
+
+.main-nav__button_opened {
+  display: none;
+}
+
+.main-nav__button-close {
+  display: none;
+
+  @include tablets {
+    display: block;
+    background: none;
+    border: none;
+  }
+}
+
+.main-nav__button-close_no-js {
+  @include tablets {
+    display: none;
+  }
+}

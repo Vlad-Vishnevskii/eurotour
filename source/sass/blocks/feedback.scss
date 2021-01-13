@@ -1,0 +1,126 @@
+.feedback {
+  position: absolute;
+  width: 382px;
+  background: $white;
+  top: 142px;
+  right: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  @include tablets {
+    width: 60%;
+    height: 60%;
+    min-width: 382px;
+    max-width: 382px;
+    padding: 22px 29px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    bottom: -542px;
+    right: 0;
+  }
+
+  @include phones {
+    height: 45%;
+    min-width: 268px;
+    max-width: 268px;
+    padding: 20px;
+    bottom: -700px;
+  }
+}
+
+.feedback__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  color: $dark-main;
+  position: relative;
+  margin-top: 8px;
+  letter-spacing: -0.691px;
+
+  @include phones {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.feedback__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background: $main-orange;
+  bottom: -14px;
+  left: -1px;
+
+  @include tablets {
+    left: 1px;
+    bottom: -12px;
+  }
+
+  @include phones {
+    left: 79px;
+    bottom: -13px;
+  }
+}
+
+.feedback__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  color: $black-opacity;
+  margin-top: 34px;
+  letter-spacing: -0.408333px;
+  width: 332px;
+  margin-bottom: 33px;
+
+  @include tablets {
+    width: 327px;
+    margin-bottom: 30px;
+  }
+
+  @include phones {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+.feedback__text-space {
+  @include tablets {
+    display: none;
+  }
+}
+
+.feedback__author-wrapper {
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    padding-left: 2px;
+  }
+
+  @include phones {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+.feedback__author-name {
+  margin-left: 14px;
+
+  @include tablets {
+    letter-spacing: -0.466px;
+  }
+
+  @include phones {
+    margin-top: 11px;
+    margin-left: 5px;
+  }
+}

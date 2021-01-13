@@ -6,7 +6,11 @@
   overflow: visible;
 
   &:invalid {
-    border-color: $main-orange;
+    border-color: red;
+  }
+
+  &:hover {
+    border-color: $hover-orange;
   }
 }
 

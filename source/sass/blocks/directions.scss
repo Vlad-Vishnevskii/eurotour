@@ -1,0 +1,78 @@
+.directions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include desktop-min {
+    justify-content: space-around;
+  }
+
+  @include tablets {
+    justify-content: initial;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.directions__item {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  color: $grey-opacity-extra;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.directions__path-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.directions__left {
+  margin-right: 53px;
+
+  @include desktop-min {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 47px;
+  }
+
+  @include phones {
+    margin-left: 22px;
+    margin-right: 25px;
+  }
+}
+
+.directions__center {
+  margin-right: 50px;
+
+  @include desktop-min {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 50px;
+  }
+
+  @include phones {
+    margin-left: 52px;
+    margin-right: 32px;
+  }
+}
+
+.directions__right {
+  @include phones {
+    margin-top: 12px;
+    margin-left: 92px;
+  }
+}
